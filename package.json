@@ -1,0 +1,35 @@
+{
+  "name": "link_shortener",
+  "version": "1.0.0",
+  "main": "app.js",
+  "license": "MIT",
+  "author": "Dmitry Bragin <jekyll@live.ru>",
+  "keywords": [
+    "mern",
+    "react"
+  ],
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node app.js",
+    "server": "nodemon app.js --ignore './client/'",
+    "client": "cd client; yarn start",
+    "dev": "cross-env NODE_ENV=development concurrently \"yarn server\" \"yarn client\"",
+    "client:install": "cd client; yarn",
+    "client:build": "cd client; yarn build"
+  },
+  "licenses": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "config": "^3.2.5",
+    "express": "^4.17.1",
+    "express-validator": "^6.4.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.1",
+    "npm": "^6.13.7",
+    "shortid": "^2.2.15"
+  },
+  "devDependencies": {
+    "concurrently": "^5.1.0",
+    "cross-env": "^7.0.0",
+    "nodemon": "^2.0.2"
+  }
+}
